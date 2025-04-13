@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LearnHub - Courses</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>SkillBeam - Online Learning Platform</h1>
+        <p>Empower your mind with new skills</p>
+        <div class="more-options">
+            <button class="more-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown" id="moreMenu">
+              <a href="profile.html">My Profile</a>
+              <a href="my_courses.html">My Courses</a>
+              <a href="#" onclick="logout()">Logout</a>
+            </div>
+          </div> 
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="track_progress.html">progress</a>
+        <a href="videos.html">videos</a>
+      </nav>
+      <div class="container">
+        <div class="course">
+          <h2>Web Development</h2>
+          <p>Learn HTML, CSS, JavaScript and React from scratch.</p>
+          <button onclick="enroll('Web Development')">Enroll</button>
+        </div>
+        <div class="course">
+          <h2>Python Programming</h2>
+          <p>Master Python programming for data science and development.</p>
+          <button onclick="enroll('Python Programming')">Enroll</button>
+        </div>
+        <div class="course">
+            <h2>JavaScript Programming</h2>
+            <p>Master JavaScript programming for development.</p>
+            <button onclick="enroll('JavaScript Programming')">Enroll</button>
+          </div>
+        <div class="course">
+          <h2>Digital Marketing</h2>
+          <p>Boost your marketing skills in SEO, SEM and Social Media.</p>
+          <button onclick="enroll('Digital Marketing')">Enroll</button>
+        </div>
+      </div>
+      <footer>
+        &copy; 2025 SkillBeam. All rights reserved.
+      </footer>
+  <script src="script.js"></script>
+</body>
+</html>

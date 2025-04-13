@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillBeam | Progress</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #333;
+    }
+
+    header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: #34495e;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+  nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e3a8a;
+    }
+
+    .progress-section {
+      margin: 30px 0;
+    }
+
+    .progress-label {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .progress-bar {
+      background-color: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 20px;
+      background-color: #2563eb;
+      width: 70%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+    }
+    .progress-bar-fill-html{
+        height: 20px;
+      background-color: #2563eb;
+      width: 90%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+    }
+    .progress-bar-fill-python{
+        height: 20px;
+      background-color: #2563eb;
+      width: 68%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+    }
+    .progress-bar-fill-js{
+        height: 20px;
+      background-color: #2563eb;
+      width: 75%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+    }
+    .progress-bar-fill-dm{
+        height: 20px;
+      background-color: #2563eb;
+      width: 47%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      border-radius: 20px 0 0 20px;
+    }
+
+    .summary {
+      margin-top: 30px;
+    }
+
+    .summary ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .summary li {
+      padding: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .summary li strong {
+      color: #1e40af;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SkillBeam</h1>
+    <p>Your Learning Progress</p>
+    <div class="more-options">
+        <button class="more-btn" onclick="toggleMenu()">⋮</button>
+        <div class="dropdown" id="moreMenu">
+          <a href="profile.html">My Profile</a>
+          <a href="my_courses.html">My Courses</a>
+          <a href="#" onclick="logout()">Logout</a>
+        </div>
+      </div> 
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+    <a href="quizzes.html">Quizzes</a>
+    <a href="track_progress.html">progress</a>
+    <a href="videos.html">videos</a>
+  </nav>
+
+  <div class="container">
+    <h2>Overall Progress</h2>
+    
+    <div class="progress-section">
+      <div class="progress-label">Course Completion: 70%</div>
+      <div class="progress-bar">
+        <div class="progress-bar-fill">70%</div>
+      </div>
+    </div>
+
+    <div class="summary">
+      <h3>Learning Summary</h3>
+      <ul>
+        <li><strong>Completed Quizzes:</strong> 6 / 10</li>
+        <li><strong>Videos Watched:</strong> 8 / 12</li>
+        <li><strong>Last Activity:</strong> JavaScript Quiz</li>
+        <li><strong>Total Time Spent:</strong> 5 hours 30 minutes</li>
+      </ul>
+    </div>
+    <section>
+        <h2>Your Subject-wise Progress</h2>
+    
+        <p><strong>HTML</strong></p>
+        <div class="progress-container">
+            <div class="progress-section">
+                <div class="progress-label">Course Completion: 90%</div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill-html">90%</div>
+                </div>
+              </div>
+        </div>
+    
+        <p><strong>Python programming</strong></p>
+        <div class="progress-container">
+            <div class="progress-section">
+                <div class="progress-label">Course Completion: 68%</div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill-python">68%</div>
+                </div>
+              </div>
+        </div>
+    
+        <p><strong>JavaScript</strong></p>
+        <div class="progress-container">
+            <div class="progress-section">
+                <div class="progress-label">Course Completion: 75%</div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill-js">75%</div>
+                </div>
+              </div>
+        </div>
+    
+        <p><strong>Digital Marketing</strong></p>
+        <div class="progress-container">
+            <div class="progress-section">
+                <div class="progress-label">Course Completion: 47%</div>
+                <div class="progress-bar">
+                  <div class="progress-bar-fill-dm">47%</div>
+                </div>
+              </div>
+        </div>
+      </section>
+  </div>
+  <footer>
+    &copy; 2025 SkillBeam. All rights reserved.
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

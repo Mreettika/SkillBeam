@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBeam - My Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>SkillBeam - My Profile</h1>
+        <p>Manage your personal details and view your courses</p>
+        <div class="more-options">
+            <button class="more-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown" id="moreMenu">
+              <a href="profile.html">My Profile</a>
+              <a href="my_courses.html">My Courses</a>
+              <a href="#" onclick="logout()">Logout</a>
+            </div>
+          </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="track_progress.html">progress</a>
+        <a href="videos.html">videos</a>
+      </nav>
+
+    <!-- Profile Section -->
+    <section>
+        <h2>Personal Information</h2>
+        <div class="card">
+            <h3>Profile Photo</h3>
+            <img src="profile_pic.png" alt="Profile Photo" id="profilePhoto" class="profile-photo">
+            <!--
+            <input type="file" id="fileInput" onchange="previewImage()">
+            <p>Click to upload a new profile photo.</p>
+            -->
+        </div>
+
+        <div class="card">
+            <label for="fullName"><strong>Full Name:</strong></label>
+            <input type="text" id="fullName" value="John Doe" disabled>
+            <br>
+            <br>
+
+            <label for="userName"><strong>Username:</strong></label>
+            <input type="text" id="userName" value="john_doe123" disabled>
+            <br>
+            <br>
+
+            <label for="email"><strong>Email ID:</strong></label>
+            <input type="email" id="email" value="john.doe@example.com" disabled>
+            <br>
+            <br>
+
+            <label for="phone"><strong>Phone Number:</strong></label>
+            <input type="tel" id="phone" value="+1 234 567 890" disabled>
+            <br>
+            <br>
+
+            <label for="password"><strong>Password:</strong></label>
+            <input type="password" id="password" value="password123" disabled>
+            <button type="button" onclick="togglePassword()">Show/Hide</button>
+            <br>
+            <br>
+        </div>
+
+        <br>
+        <h3>Enrolled Courses</h3>
+        <div class="card">
+            <ul>
+                <li><a href="course_detail.html">Introduction to Python Programming</a></li>
+                <li><a href="course_detail.html">HTML</a></li>
+                <li><a href="course_detail.html">Introduction to JavaScript</a></li>
+                <li><a href="course_detail.html">Digital Marketing</a></li>
+            </ul>
+        </div>
+
+        <br>
+        <div class="card">
+            <button onclick="editProfile()">Edit Profile</button>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 SkillBeam. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle password visibility
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+
+        // Enable editing for profile details
+        function editProfile() {
+            document.getElementById("fullName").disabled = false;
+            document.getElementById("userName").disabled = false;
+            document.getElementById("email").disabled = false;
+            document.getElementById("phone").disabled = false;
+            document.getElementById("password").disabled = false;
+        }
+    </script>
+
+</body>
+</html>

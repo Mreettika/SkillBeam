@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillBeam - My Courses</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>SkillBeam - My Courses</h1>
+        <p>Your personalized course list</p>
+        <div class="more-options">
+            <button class="more-btn" onclick="toggleMenu()">⋮</button>
+            <div class="dropdown" id="moreMenu">
+              <a href="profile.html">My Profile</a>
+              <a href="my_courses.html">My Courses</a>
+              <a href="#" onclick="logout()">Logout</a>
+            </div>
+          </div> 
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="track_progress.html">progress</a>
+        <a href="videos.html">videos</a>
+      </nav>
+
+    <!-- My Courses Section -->
+    <section>
+        <h2>Courses You Are Enrolled In</h2>
+
+        <!-- Course 1 -->
+        <div class="card">
+            <h3>Introduction to JavaScript</h3>
+            <p><strong>Status:</strong> In Progress</p>
+            <p><strong>Progress:</strong> 75%</p>
+            <button onclick="window.location.href='courses.html'">View Course</button>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="card">
+            <h3>HTML</h3>
+            <p><strong>Status:</strong> Completed</p>
+            <p><strong>Progress:</strong> 100%</p>
+            <button onclick="window.location.href='courses.html'">View Course</button>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="card">
+            <h3>Introduction to Python programming</h3>
+            <p><strong>Status:</strong> In Progress</p>
+            <p><strong>Progress:</strong> 45%</p>
+            <button onclick="window.location.href='courses.html'">View Course</button>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="card">
+            <h3>Digital Marketing</h3>
+            <p><strong>Status:</strong> Not Started</p>
+            <p><strong>Progress:</strong> 0%</p>
+            <button onclick="window.location.href='courses.html'">View Course</button>
+        </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 SkillBeam. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
